@@ -32,7 +32,7 @@ export default function BulkSearch() {
     setResults(null)
     try {
       const { data } = await api.post('/api/profile/students/bulk', { emails })
-      setResults(data)
+      setResults(data.profiles ?? [])
     } catch (err) {
       const msg = err.response?.data?.message || (err.request ? 'Unable to connect to server' : err.message)
       toast.error(msg)
