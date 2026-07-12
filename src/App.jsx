@@ -19,6 +19,8 @@ import StudentDashboard from './pages/student/Dashboard'
 import StudentProfile from './pages/student/Profile'
 import StudentDocuments from './pages/student/Documents'
 import StudentChangePassword from './pages/student/ChangePassword'
+import JobListing from './pages/student/JobListing'
+import MyApplications from './pages/student/MyApplications'
 
 // Admin pages
 import AdminDashboard from './pages/admin/Dashboard'
@@ -26,6 +28,10 @@ import StudentSearch from './pages/admin/StudentSearch'
 import BulkSearch from './pages/admin/BulkSearch'
 import AdminStudentDocuments from './pages/admin/StudentDocuments'
 import AdminChangePassword from './pages/admin/ChangePassword'
+import CompanyManagement from './pages/admin/CompanyManagement'
+import JobPosting from './pages/admin/JobPosting'
+import EligibilityCheck from './pages/admin/EligibilityCheck'
+import ShortlistManagement from './pages/admin/ShortlistManagement'
 
 // 404
 import NotFound from './pages/NotFound'
@@ -79,6 +85,8 @@ export default function App() {
             <Route path="profile" element={<StudentProfile />} />
             <Route path="documents" element={<StudentDocuments />} />
             <Route path="change-password" element={<StudentChangePassword />} />
+            <Route path="jobs" element={<JobListing />} />
+            <Route path="applications" element={<MyApplications />} />
           </Route>
 
           {/* Admin routes */}
@@ -98,6 +106,10 @@ export default function App() {
             <Route path="bulk-search" element={<BulkSearch />} />
             <Route path="student-documents" element={<AdminStudentDocuments />} />
             <Route path="change-password" element={<AdminChangePassword />} />
+            <Route path="companies" element={<CompanyManagement />} />
+            <Route path="post-job" element={<JobPosting />} />
+            <Route path="eligibility" element={<EligibilityCheck />} />
+            <Route path="shortlist" element={<ShortlistManagement />} />
           </Route>
 
           {/* 404 */}
