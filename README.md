@@ -1,4 +1,4 @@
-# user_store-app
+# Placement_Management_Server_app
 
 A complete React frontend for the **User Store Placement Management System** backend.
 
