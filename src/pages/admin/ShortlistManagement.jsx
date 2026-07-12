@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { jobAPI, eligibilityAPI, applicationAPI } from "../../api/placement.api.js";
 import toast from "react-hot-toast";
-import { FiCheck, FiX } from "react-icons/fi";
 
 const ShortlistManagement = () => {
   const [jobs, setJobs] = useState([]);
