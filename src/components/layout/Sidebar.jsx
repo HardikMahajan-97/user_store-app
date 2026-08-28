@@ -8,12 +8,17 @@ import {
   HiUsers,
   HiFolder,
   HiX,
+  HiBriefcase,
+  HiClipboardList,
+  HiCheckCircle,
 } from 'react-icons/hi'
 import { useAuth } from '../../hooks/useAuth'
 import { ROLES } from '../../utils/constants'
 
 const studentLinks = [
   { to: '/student/dashboard', icon: HiHome, label: 'Dashboard' },
+  { to: '/student/jobs', icon: HiBriefcase, label: 'Browse Jobs' },
+  { to: '/student/applications', icon: HiClipboardList, label: 'My Applications' },
   { to: '/student/profile', icon: HiUser, label: 'My Profile' },
   { to: '/student/documents', icon: HiDocumentText, label: 'Documents' },
   { to: '/student/change-password', icon: HiKey, label: 'Change Password' },
@@ -21,6 +26,10 @@ const studentLinks = [
 
 const adminLinks = [
   { to: '/admin/dashboard', icon: HiHome, label: 'Dashboard' },
+  { to: '/admin/companies', icon: HiBriefcase, label: 'Manage Companies' },
+  { to: '/admin/post-job', icon: HiClipboardList, label: 'Post Job' },
+  { to: '/admin/eligibility', icon: HiCheckCircle, label: 'Eligibility Check' },
+  { to: '/admin/shortlist', icon: HiUsers, label: 'Shortlist Management' },
   { to: '/admin/student-search', icon: HiSearch, label: 'Student Search' },
   { to: '/admin/bulk-search', icon: HiUsers, label: 'Bulk Search' },
   { to: '/admin/student-documents', icon: HiFolder, label: 'Student Documents' },

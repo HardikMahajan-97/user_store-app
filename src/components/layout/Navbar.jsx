@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { HiMenu, HiLogout, HiUser } from 'react-icons/hi'
 import { useAuth } from '../../hooks/useAuth'
 import { ROLES } from '../../utils/constants'
+import NotificationPanel from '../NotificationPanel'
 
 export default function Navbar({ onMenuClick }) {
   const { user, logout } = useAuth()
@@ -30,6 +31,7 @@ export default function Navbar({ onMenuClick }) {
       </div>
 
       <div className="flex items-center gap-3">
+        <NotificationPanel />
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 bg-gray-100 rounded-full flex items-center justify-center">
             <HiUser className="h-4 w-4 text-gray-600" />

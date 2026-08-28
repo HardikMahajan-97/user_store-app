@@ -10,6 +10,7 @@ import LoadingSpinner from '../../components/common/LoadingSpinner'
 const emptyProfile = {
   dateOfBirth: '', address: '', institution: '', degree: '',
   branch: '', cgpa: '', graduationYear: '',
+  tenthPercentage: '', twelthPercentage: '', cocubesScore: '', compositeScore: '',
   codingProfiles: [],
   professionalProfiles: [],
   skills: [],
@@ -108,6 +109,9 @@ export default function StudentProfile() {
     try {
       const payload = {
         ...profile,
+        tenthPercentage: profile.tenthPercentage === '' ? 0 : Number(profile.tenthPercentage),
+        twelthPercentage: profile.twelthPercentage === '' ? 0 : Number(profile.twelthPercentage),
+        cocubesScore: profile.cocubesScore === '' ? 0 : Number(profile.cocubesScore),
         projects: profile.projects.map((p) => ({
           ...p,
           technologies: typeof p.technologies === 'string'
@@ -166,6 +170,14 @@ export default function StudentProfile() {
             value={profile.cgpa} onChange={(e) => setField('cgpa', e.target.value)} />
           <FormInput label="Graduation Year" id="gradYear" type="text" placeholder="e.g. 2025"
             value={profile.graduationYear} onChange={(e) => setField('graduationYear', e.target.value)} />
+          <FormInput label="10th Percentage" id="tenthPercentage" type="number" placeholder="e.g. 92"
+            value={profile.tenthPercentage} onChange={(e) => setField('tenthPercentage', e.target.value)} />
+          <FormInput label="12th Percentage" id="twelthPercentage" type="number" placeholder="e.g. 89"
+            value={profile.twelthPercentage} onChange={(e) => setField('twelthPercentage', e.target.value)} />
+          <FormInput label="CoCubes Score" id="cocubesScore" type="number" placeholder="e.g. 72"
+            value={profile.cocubesScore} onChange={(e) => setField('cocubesScore', e.target.value)} />
+          <FormInput label="Composite Score" id="compositeScore" type="text" value={profile.compositeScore || 'Will be calculated after save'}
+            readOnly />
         </div>
       </Section>
 
